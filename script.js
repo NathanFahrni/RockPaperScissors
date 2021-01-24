@@ -1,10 +1,10 @@
 var choices = ["paper", "rock", "scissors"];
-var i = Math.floor(Math.random() * 3);
-var ComChoice = choices[i];
+var random = Math.floor(Math.random() * 3);
+var aiCoice = choices[i];
 var UserPoints = 0;
-var ComPoints = 0;
+var aiPoints = 0;
 function score(){
-	var score_container = document.getElementById("score").innerHTML = UserPoints + " - " + ComPoints;
+	var score_container = document.getElementById("score").innerHTML = UserPoints + " - " + aiPoints;
 }
 setInterval(score, 50);
 function convert(choice){ //this function shows the hand of you and the AI
@@ -19,20 +19,20 @@ function game(UserChoice){
 	box.style.display = "inline-flex";
 	var userDiv = document.getElementById("YourChoice");
 	userDiv.innerHTML = convert(UserChoice);
-	var comDiv = document.getElementById("AiChoice");
-	comDiv.innerHTML = convert(ComChoice);
-	if(UserChoice === "paper" && ComChoice === "rock" || UserChoice === "rock" && ComChoice === "scissors" || UserChoice === "scissors" && ComChoice === "paper"){
+	var aiDiv = document.getElementById("AiChoice");
+	aioDiv.innerHTML = convert(aiChoice);
+	if(UserChoice === "paper" && aiChoice === "rock" || UserChoice === "rock" && aiChoice === "scissors" || UserChoice === "scissors" && aiChoice === "paper"){
 		win(UserChoice);
 	}
-	else if(UserChoice === ComChoice){
+	else if(UserChoice === aiChoice){
 		draw(UserChoice);
 	}
 	else{
 		lose(UserChoice);
 	}
 	function continuGame(){
-		i = Math.floor(Math.random() * 3);
-		ComChoice = choices[i];
+		random = Math.floor(Math.random() * 3);
+		aiChoice = choices[random];
 		box.style.display = "none";
 	}
 	setTimeout(continuGame, 3500);
