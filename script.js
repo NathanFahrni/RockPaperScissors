@@ -1,6 +1,6 @@
 var choices = ["paper", "rock", "scissors"];
 var random = Math.floor(Math.random() * 3);
-var aiCoice = choices[i];
+var aiChoice = choices[i];
 var UserPoints = 0;
 var aiPoints = 0;
 function score(){
@@ -20,7 +20,7 @@ function game(UserChoice){
 	var userDiv = document.getElementById("YourChoice");
 	userDiv.innerHTML = convert(UserChoice);
 	var aiDiv = document.getElementById("AiChoice");
-	aioDiv.innerHTML = convert(aiChoice);
+	aiDiv.innerHTML = convert(aiChoice);
 	if(UserChoice === "paper" && aiChoice === "rock" || UserChoice === "rock" && aiChoice === "scissors" || UserChoice === "scissors" && aiChoice === "paper"){
 		win(UserChoice);
 	}
@@ -65,7 +65,7 @@ function draw(btn){
 
 //this function is the lose function itdisplays a diffrent sentence and it gives the AI one point
 function lose(btn){
-	ComPoints++;
+	aiPoints++;
 	document.getElementById("who").innerHTML = "You lose!";
 	var btn = document.getElementById(btn);
     btn.classList.remove("btn-choice");
