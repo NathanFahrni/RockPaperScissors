@@ -1,0 +1,279 @@
+@keyframes animationSlideIn{
+	0%{ 
+		width:40px; 
+		height: 40PX;
+	}
+	100%{
+		width: 110px;
+		height: 110px;
+	}
+}
+
+@keyframes animationSizing{
+	0%{ 
+		font-size: 5px;
+	}
+	100%{
+		font-size: 40px;
+	}
+}
+
+html, body{
+	height: 100%;
+}
+body{
+	margin: 0;
+	padding: 0;
+	font-family: 'Quicksand', sans-serif;
+}
+header{
+	width: 100%;
+	height: 15%;
+	padding-top: 20px;
+	background-color:  #8d9091;;
+	box-sizing: border-box;
+}
+header h1{
+	text-align: center;
+    margin: 0;
+    font-size: 40px;
+    font-family: 'Potta One', sans-serif;
+}
+
+header h3{
+    text-align: center;
+    margin: 0;
+    font-size: 20px;
+    font-family: 'Potta One', sans-serif;
+}
+
+header p{
+    text-align: center;
+    margin: 0;
+    font-size: 12px;
+    font-family: 'Potta One', sans-serif;
+}
+
+.container{
+	position: relative;
+	height: 85%;
+	width: 100%;
+	box-sizing: border-box;
+	padding: 30px;
+	background-color: #635e5e;
+}
+
+.score-container{
+	position: relative;
+	margin: 30px auto;
+	width: auto;
+	height: 100px;
+    color: #0f0f0f;
+}
+
+#score{
+	position: absolute;
+	text-align: center;
+	font-size: 80px;
+    width: 100%;
+}
+
+.player{
+	position: absolute;
+	left: 40%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+    background-color: #ff0000;
+    color: #000000;
+	width: auto;
+	height: auto;
+    font-size: 60px;
+    font-family: 'Architects Daughter',;
+	padding: 2px 10px;
+    box-sizing: border-box;
+    border-radius: 30px;
+}
+
+.ai{
+	position: absolute;
+	right: 41%;
+	top: 50%;
+	transform: translate(50%, -50%);
+    background-color:  #ff0000;
+    color: #000000;
+	width: auto;
+	height: auto;
+    font-size: 60px;
+    font-family: 'Architects Daughter', ;
+	padding: 2px 10px;
+    box-sizing: border-box;
+    border-radius: 30px;
+}
+
+.buttons{
+	width: auto;
+	position: absolute;
+	top: 22%; 
+	left: 50%;
+	transform: translateX(-50%);
+}
+
+.btn-choice{
+	width: 200px;
+	height: 200px;
+    margin :5px;
+    border: 5px solid #01080f;
+    border-radius: 50%;
+    color: #000000;
+    font-size: 40px;
+    background-color: rgb(240, 205, 7);
+    cursor: pointer;
+    outline: none;
+}
+
+.btn-choice:hover{
+    background-color:  #e64900;
+    border-color: white;
+    color: rgb(10, 3, 51);
+    width: 250px;
+	height: 250px;
+}
+
+#game-container{
+	position: absolute;
+	top: 43%;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 540px;
+	height: 40%;
+	display: none;
+}
+
+#you{
+	position: relative;
+	width: 37.5%;
+	font-size: 50px;
+}
+
+#ai{
+	position: relative;
+	width: 37.5%;
+	font-size: 50px;
+}
+
+#YourChoice{
+	animation-name: animationSlideIn;
+	animation-duration: 2s;
+	animation-fill-mode: forwards;
+	position: absolute;
+	top: 45%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 110px;
+	height: 110px;
+	font-size: 50px;
+	padding-top: 20px;
+	border: 3px solid #34495e;
+    border-radius: 50%;
+    color: #34495e;
+    background-color:   rgb(240, 205, 7);
+    box-sizing: border-box;
+    text-align: center;
+}
+
+#AiChoice{
+	animation-name: animationSlideIn;
+	animation-duration: 2s;
+	animation-fill-mode: forwards;
+	position: absolute;
+	top: 45%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 110px;
+	height: 110px;
+	font-size: 50px;
+	padding-top: 20px;
+	border: 3px solid #34495e;
+    border-radius: 50%;
+    color: #34495e;
+    background-color: rgb(240, 205, 7);
+    box-sizing: border-box;
+    text-align: center;
+}
+
+#result{
+	position: relative;
+	width: 25%;
+}
+
+#result p{
+	position: absolute;
+	top: 45%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	color: rgb(7, 6, 7);
+	font-size: 30px;
+	width: 100%;
+	margin: 0;
+	text-align: center;
+}
+
+.who{
+	position: absolute;
+	bottom: 15%;
+	left: 50%;
+	transform: translateX(-50%);
+	color: rgb(3, 3, 3);
+	font-size: 30px;
+}
+
+.green{
+	width: 200px;
+	height: 200px;
+    margin: 5px;
+    border: 3px solid green;
+    box-shadow: 0 0 10px green;
+    border-radius: 50%;
+    color: #34495e;
+    font-size: 35px;
+    background-color: rgb(28, 145, 63);
+    cursor: pointer;
+    outline: none;
+    transition: .3s;
+}
+
+.red{
+	width: 200px;
+	height: 200px;
+    margin: 5px;
+    border: 3px solid red;
+    box-shadow: 0 0 10px red;
+    border-radius: 50%;
+    color: #34495e;
+    font-size: 35px;
+    background-color: rgb(209, 10, 10);
+    cursor: pointer;
+    outline: none;
+    transition: .3s;
+}
+
+.gray{
+	width: 200px;
+	height: 200px;
+    margin: 5px;
+    border: 3px solid #292928;
+    box-shadow: 0 0 10px #292928;
+    border-radius: 50%;
+    color: #34495e;
+    font-size: 35px;
+    background-color: rgb(44, 42, 42);
+    cursor: pointer;
+    outline: none;
+    transition: .3s;
+}
+
+.sizing{
+	animation-name: animationSizing;
+	animation-duration: 2s;
+	animation-fill-mode: forwards;
+}
